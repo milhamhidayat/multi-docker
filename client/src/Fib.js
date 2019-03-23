@@ -3,7 +3,7 @@ import axios from 'axios'
 
 class Fib extends Component {
     state = {
-        seenIndexes: [],
+        seenIndices: [],
         values: {},
         index: ''
     }
@@ -21,14 +21,14 @@ class Fib extends Component {
     }
 
     async fetchIndexes() {
-        const seenIndexes = await axios.get('/api/values/all')
+        const seenIndices = await axios.get('/api/values/all')
         this.setState({
-            seenIndexes: seenIndexes.data
+            seenIndices: seenIndices.data
         })
     }
 
-    renderSeenIndexes() {
-        return this.state.seenIndexes.map(({ number }) => number).join(', ')
+    renderSeenIndicies() {
+        return this.state.seenIndices.map(({ number }) => number).join(', ')
     }
 
     renderValues() {
@@ -64,7 +64,7 @@ class Fib extends Component {
                     <button>Submit</button>
                 </form>
                 <h3>Indexes I have seen: </h3>
-                {this.renderSeenIndexes()}
+                {this.renderSeenIndicies()}
                 <h3>Calculated values: </h3>
                 {this.renderValues()}
             </div>
