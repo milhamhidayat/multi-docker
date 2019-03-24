@@ -11,3 +11,9 @@ Multi docker for docker and kubernetes course
 docker build -f Dockerfile.dev .
 docker run <container id>
 ```
+
+3. To run 
+
+```sh
+docker-compose up
+```
