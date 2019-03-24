@@ -3,7 +3,7 @@ Multi docker for docker and kubernetes course
 
 ## Dev
 
-### Client
+### Client, Server, Worker
 1. Add Dockerfile.dev
 2. Run
 
