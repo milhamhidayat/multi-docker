@@ -9,6 +9,7 @@ class Fib extends Component {
     }
 
     componentDidMount() {
+        console.log("did mount")
         this.fetchValues()
         this.fetchIndexes()
     }
@@ -54,6 +55,7 @@ class Fib extends Component {
     }
 
     render() {
+        console.log("render")
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
