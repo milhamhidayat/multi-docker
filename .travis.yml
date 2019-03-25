@@ -16,7 +16,7 @@ after_success:
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
-  - docker push milhamhidayat/multi-client:latest
-  - docker push milhamhidayat/multi-nginx:latest
-  - docker push milhamhidayat/multi-server:latest
-  - docker push milhamhidayat/multi-worker:latest
+  - docker push milhamhidayat/multi-client
+  - docker push milhamhidayat/multi-nginx
+  - docker push milhamhidayat/multi-server
+  - docker push milhamhidayat/multi-worker
