@@ -3,20 +3,20 @@ services:
   - docker
 
 before_install:
-  - docker build -t milhamhidayat/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t photon628/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run milhamhidayat/react-test npm test -- --coverage
+  - docker run photon628/react-test npm test -- --coverage
 
 after_success:
-  - docker build -t milhamhidayat/multi-client ./client
-  - docker build -t milhamhidayat/multi-nginx ./nginx
-  - docker build -t milhamhidayat/multi-server ./server
-  - docker build -t milhamhidayat/multi-worker ./worker
+  - docker build -t photon628/multi-client ./client
+  - docker build -t photon628/multi-nginx ./nginx
+  - docker build -t photon628/multi-server ./server
+  - docker build -t photon628/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
-  - docker push milhamhidayat/multi-client
-  - docker push milhamhidayat/multi-nginx
-  - docker push milhamhidayat/multi-server
-  - docker push milhamhidayat/multi-worker
+  - docker push photon628/multi-client
+  - docker push photon628/multi-nginx
+  - docker push photon628/multi-server
+  - docker push photon628/multi-worker
