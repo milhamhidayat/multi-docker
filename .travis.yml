@@ -14,9 +14,9 @@ after_success:
   - docker build -t milhamhidayat/multi-server ./server
   - docker build -t milhamhidayat/multi-worker ./worker
   # Log in to the docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login docker.io -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
-  - sudo docker push milhamhidayat/multi-client
-  - sudo docker push milhamhidayat/multi-nginx
-  - sudo docker push milhamhidayat/multi-server
-  - sudo docker push milhamhidayat/multi-worker
+  - docker push milhamhidayat/multi-client:latest
+  - docker push milhamhidayat/multi-nginx:latest
+  - docker push milhamhidayat/multi-server:latest
+  - docker push milhamhidayat/multi-worker:latest
