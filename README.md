@@ -17,3 +17,5 @@ docker run <container id>
 ```sh
 docker-compose up
 ```
+
+Check docker hub password in travis ci
