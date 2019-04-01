@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <h1>This is fib calclator</h1>
+          <h1>Fib Calculator v2</h1>
           <div>
             <Link to="/">Home</Link>
             <Link to="/otherpage">Other Page</Link>
